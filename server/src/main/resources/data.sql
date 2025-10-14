@@ -1,0 +1,33 @@
+INSERT INTO employee (firstName, lastName, age) VALUES ('artur antunes', 'zico', 52);
+INSERT INTO employee (firstName, lastName, age) VALUES ('michel', 'platini', 60 );
+INSERT INTO employee (firstName, lastName, age) VALUES ('johan', 'cruyff', 68);
+INSERT INTO employee (firstName, lastName, age) VALUES ('diego', 'maradona', 58);
+INSERT INTO employee (firstName, lastName, age) VALUES ('franz', 'beckenbauer', 74);
+INSERT INTO employee (firstName, lastName, age) VALUES ('sergio', 'rakitic', 45);
+INSERT INTO employee (firstName, lastName, age) VALUES ('lionel', 'messi', 45);
+INSERT INTO employee (firstName, lastName, age) VALUES ('leandro', 'barzagli', 34);
+INSERT INTO employee (firstName, lastName, age) VALUES ('sergio', 'ramos', 48);
+INSERT INTO employee (firstName, lastName, age) VALUES ('luis', 'suarez', 40);
+INSERT INTO employee (firstName, lastName, age) VALUES ('cristiano', 'ronaldo', 40);
+INSERT INTO employee (firstName, lastName, age) VALUES ('kevin', 'de bruyne', 32);
+INSERT INTO employee (firstName, lastName, age) VALUES ('kylian', 'mbappé', 26);
+INSERT INTO employee (firstName, lastName, age) VALUES ('neymar', 'jr', 31);
+INSERT INTO employee (firstName, lastName, age) VALUES ('paul', 'pogba', 29);
+INSERT INTO employee (firstName, lastName, age) VALUES ('antoine', 'griezmann', 32);
+INSERT INTO employee (firstName, lastName, age) VALUES ('robert', 'lewandowski', 36);
+INSERT INTO employee (firstName, lastName, age) VALUES ('sadio', 'mane', 31);
+INSERT INTO employee (firstName, lastName, age) VALUES ('eden', 'hazard', 33);
+INSERT INTO employee (firstName, lastName, age) VALUES ('toni', 'kroos', 34);
+INSERT INTO employee (firstName, lastName, age) VALUES ('sergio', 'ramos', 39);
+INSERT INTO employee (firstName, lastName, age) VALUES ('thiago', 'silva', 38);
+INSERT INTO employee (firstName, lastName, age) VALUES ('virgil', 'van dijk', 32);
+INSERT INTO employee (firstName, lastName, age) VALUES ('harry', 'kane', 30);
+INSERT INTO employee (firstName, lastName, age) VALUES ('karim', 'benzema', 36);
+INSERT INTO employee (firstName, lastName, age) VALUES ('serge', 'gnabry', 27);
+INSERT INTO employee (firstName, lastName, age) VALUES ('raul', 'gonzalez', 48);
+INSERT INTO employee (firstName, lastName, age) VALUES ('zlatan', 'ibrahimovic', 42);
+INSERT INTO employee (firstName, lastName, age) VALUES ('andres', 'iniesta', 38);
+INSERT INTO employee (firstName, lastName, age) VALUES ('xavi', 'hernandez', 41);
+
+commit;
+
