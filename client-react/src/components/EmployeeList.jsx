@@ -4,6 +4,7 @@ const URL = import.meta.env.VITE_BASE_URL + "/api/employees";
 
 function EmployeeList() {
   const [employees, setEmployees] = useState();
+  const [editingEmployeeId, setEditingEmployeeId] = useState(-1);
 
   useEffect(() => {
     console.log("URL is=", URL);
@@ -30,6 +31,64 @@ function EmployeeList() {
     const newList = employees.filter((emp) => emp.id !== id);
     setEmployees(newList);
   }
+  function EmployeeDisplayComponent(prop) {
+    var emp = prop.emp;
+    return (
+      <div className="d-flex justify-content-between flex-row  align-items-center">
+        {emp.firstName} {emp.lastName}
+        <div>
+          <button
+            type="button"
+            className="btn btn-link"
+            onClick={() => {
+              setEditingEmployeeId(emp.id);
+            }}>
+            <i className="bi bi-pencil"></i>
+          </button>
+          <button
+            type="button"
+            className="btn btn-link"
+            onClick={() => {
+              remove(emp.id);
+            }}>
+            <i className="bi bi-trash"></i>
+          </button>
+        </div>
+      </div>
+    );
+  }
+  function EmployeeEditComponent(prop) {
+    var emp = prop.emp;
+    const [firstName, setFirstName] = useState(emp.firstName);
+    const [lastName, setLastName] = useState(emp.lastName);
+
+    return (
+      <div className="d-flex justify-content-between flex-column align-items-center">
+        <div>
+          <input type="text" className="form-control m-2" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          <input type="text" className="form-control m-2" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          <button
+            type="button"
+            className="btn btn-primary me-2"
+            onClick={() => {
+              emp.firstName = firstName;
+              emp.lastName = lastName;
+              setEditingEmployeeId(-1);
+            }}>
+            Conferma
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={() => {
+              setEditingEmployeeId(-1);
+            }}>
+            Annulla
+          </button>
+        </div>
+      </div>
+    );
+  }
   return (
     <>
       <div className="container text-center w-50">
@@ -41,27 +100,7 @@ function EmployeeList() {
             <ul className="list-group w-75">
               {employees.map((emp) => (
                 <li className="list-group-item" key={emp.id}>
-                  <div className="d-flex justify-content-between flex-row  align-items-center">
-                    {emp.firstName} {emp.lastName}
-                    <div>
-                      <button
-                        type="button"
-                        className="btn btn-link"
-                        onClick={() => {
-                          edit(emp.id);
-                        }}>
-                        <i className="bi bi-pencil"></i>
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-link"
-                        onClick={() => {
-                          remove(emp.id);
-                        }}>
-                        <i className="bi bi-trash"></i>
-                      </button>
-                    </div>
-                  </div>
+                  {editingEmployeeId === emp.id ? <EmployeeEditComponent emp={emp} /> : <EmployeeDisplayComponent emp={emp} />}
                 </li>
               ))}
             </ul>
