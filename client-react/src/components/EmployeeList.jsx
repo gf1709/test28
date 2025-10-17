@@ -20,12 +20,6 @@ function EmployeeList() {
     fetchData();
   }, []);
 
-  function doLog(msg) {
-    console.log(msg);
-  }
-  function edit(id) {
-    console.log("editing...", id);
-  }
   function remove(id) {
     console.log("removing...", id);
     const newList = employees.filter((emp) => emp.id !== id);
