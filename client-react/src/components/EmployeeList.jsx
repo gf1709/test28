@@ -65,11 +65,11 @@ function EmployeeList() {
     return (
       <div className="d-flex justify-content-between flex-column align-items-center">
         <div>
-          <input type="text" className="form-control m-2" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-          <input type="text" className="form-control m-2" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          <input type="text" className="form-control form-control-sm m-2" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          <input type="text" className="form-control form-control-sm m-2" value={lastName} onChange={(e) => setLastName(e.target.value)} />
           <button
             type="button"
-            className="btn btn-primary me-2"
+            className="btn btn-sm btn-primary me-2"
             onClick={() => {
               emp.firstName = firstName;
               emp.lastName = lastName;
@@ -79,7 +79,7 @@ function EmployeeList() {
           </button>
           <button
             type="button"
-            className="btn btn-secondary"
+            className="btn btn-sm btn-secondary"
             onClick={() => {
               setEditingEmployeeId(-1);
             }}>
